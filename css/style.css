@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+
+}
+
+.container{
+    display: flex;
+    gap: 2rem;
+    
+}
+
+aside{
+    flex: 25%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    align-items: center;
+    justify-content: center;
+
+    /*border: solid 2px red;*/
+}
+
+.logo{
+    position: absolute;
+    top: 4rem;
+    left: 3rem;
+
+}
+
+.logo span{
+    font-family: "Knewave", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #219EBC;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.logo p{
+    font-family: "Inter", serif;
+}
+
+nav.buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 4rem;
+    /*border: solid red 2px;*/
+}
+
+.buttons button{
+    width: 250px;
+    height: 55px;
+    border-radius: 20px 0;
+    border: none;
+    font-family: "Inter", serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: white;
+
+    box-shadow: 2px 4px 4px gray;
+}
+
+hr{
+    margin: 4% 0;
+    margin-bottom: 1.6%;
+    background-color: #457B9D;
+    width: 3px;
+}
+
+
+.box-container{
+    flex: 70%;
+    height: 100vh;
+   
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.group1, .group2, .group3{
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.group1 .box:nth-child(1) {background-image: url(../images-en-fundamental/matemática.jpg);}
+.group1 .box:nth-child(2) {background-image: url(../images-en-fundamental/ciencias-naturais.jpg);}
+.group1 .box:nth-child(3) {background-image: url(../images-en-fundamental/ciencias-humanas.jpg);}
+
+.group2 .box:nth-child(1) {background-image: url(../images-en-fundamental/lingua-portuguesa.jpg);}
+.group2 .box:nth-child(2) {background-image: url(../images-en-fundamental/geografia.jpg);}
+.group2 .box:nth-child(3) {background-image: url(../images-en-fundamental/história.jpg);}
+ 
+.group3 .box:nth-child(1) {background-image: url(../images-en-fundamental/artes.jpg);}
+.group3 .box:nth-child(2) {background-image: url(../images-en-fundamental/ed-física.jpg);}
+.group3 .box:nth-child(3) {background-image: url(../images-en-fundamental/lingua-estrangeira.jpg);}
+
+.box{
+    position: relative; /* para o ::before */
+
+    /*style do titulo*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Knewave", serif;
+    font-weight: 400;
+    text-shadow: 3px 3px 2px black;
+    font-size: 26px;
+    color: white;
+    text-align: center;
+    /*style do titulo*/
+
+    height: 11rem;
+    width: 14rem;
+    border: solid #457B9D 1px;
+    border-radius: 10px;
+    text-align: center;
+    background-size: cover;
+    
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(172, 171, 171, 0.534);
+    opacity: 0.5; 
+    z-index: 0; 
+}
+
+.box .title{
+    margin-top: 5rem;
+    position: relative; /* Garante que o texto fique acima do ::before */
+    z-index: 1;
+   
+}
